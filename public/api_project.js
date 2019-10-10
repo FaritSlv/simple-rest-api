@@ -1,0 +1,14 @@
+define({
+  "name": "Простой REST API",
+  "version": "0.1.0",
+  "description": "Простая реализация REST API",
+  "apidoc": "0.3.0",
+  "sampleUrl": false,
+  "defaultVersion": "0.0.0",
+  "generator": {
+    "name": "apidoc",
+    "time": "2019-10-10T21:34:24.074Z",
+    "url": "http://apidocjs.com",
+    "version": "0.17.7"
+  }
+});

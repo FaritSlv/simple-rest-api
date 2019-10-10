@@ -1,0 +1,9 @@
+{
+    "name": "Простой REST API",
+    "version": "0.1.0",
+    "description": "Простая реализация REST API",
+    "apidoc": {
+        "title": "Простая реализация REST API",
+        "url" : "http://localhost:8000/api/"
+    }
+}

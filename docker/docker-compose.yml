@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build:
+      context: ./webserver
+      args:
+        - PHP_VER=7.2
+    ports:
+      - "8000:80"
+    volumes:
+      - "../:/var/www/"
+    environment:
+      XDEBUG_CONFIG: ${XDEBUG_CONFIG}
+

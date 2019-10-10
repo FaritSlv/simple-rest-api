@@ -1,0 +1,199 @@
+define({ "api": [
+  {
+    "type": "post",
+    "url": "/api/user/",
+    "title": "Создать пользователя",
+    "group": "User",
+    "name": "create",
+    "parameter": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"name\": \"testName\",\n     \"email\": \"example@info.loc\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "result",
+            "description": "<p>результат создания</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Пример ответа:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"result\": true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/Service/Api/User.php",
+    "groupTitle": "User"
+  },
+  {
+    "type": "delete",
+    "url": "/api/user/:id",
+    "title": "Удалить пользователя",
+    "group": "User",
+    "name": "delete",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>идентификатор пользователя</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "result",
+            "description": "<p>результат создания</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Пример ответа:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"result\": true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/Service/Api/User.php",
+    "groupTitle": "User"
+  },
+  {
+    "type": "put",
+    "url": "/api/user/:id",
+    "title": "Обновить пользователя",
+    "group": "User",
+    "name": "update",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": ":id",
+            "description": "<p>идентификатор пользователя</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n     \"name\": \"testName\",\n     \"email\": \"example@info.loc\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "result",
+            "description": "<p>результат создания</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Пример ответа:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"result\": true\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "src/Service/Api/User.php",
+    "groupTitle": "User"
+  },
+  {
+    "type": "get",
+    "url": "/api/user/",
+    "title": "Получить список пользователей",
+    "group": "User",
+    "name": "view",
+    "parameter": {
+      "examples": [
+        {
+          "title": "массив полей для выборки, можно создавать алиясы:",
+          "content": "?select[]=id&select[testName]=name",
+          "type": "Url"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "result",
+            "description": "<p>результат выборки</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "result.id",
+            "description": "<p>id пользователя</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "result.name",
+            "description": "<p>имя пользователя</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "result.email",
+            "description": "<p>e-mail пользователя</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Пример ответа:",
+          "content": "HTTP/1.1 200 OK\n{\n  \"success\": true,\n  \"result\": [\n    {\n      \"id\": \"1\",\n      \"name\": \"Te1\",\n      \"email\": \"trest@test.com\"\n    },\n    {\n      \"id\": \"2\",\n      \"name\": \"test2\",\n      \"email\": \"test@test.ru\"\n    }\n  ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "sampleRequest": [
+      {
+        "url": "http://localhost:8000/api/user/?select[]=id&select[test]=name"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "src/Service/Api/User.php",
+    "groupTitle": "User"
+  }
+] });
